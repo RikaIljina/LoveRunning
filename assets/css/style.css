@@ -25,6 +25,9 @@ h1 {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
@@ -32,7 +35,19 @@ header {
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
 }
+.nav-toggle-label {
+    font-size: 2rem;
+}
 
+/* Nav toggle */
+
+#nav-toggle:checked ~ nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;;
+}
 
 header a {
     text-decoration: none;
@@ -58,9 +73,12 @@ nav {
     background-color: #ffffff;
     width: 100%;
     left: 0;
+    /* 100% means: start at the bottom of its parent, 0% means at the top of its parent */
+    top: 100%;
     padding: 0 1em;
     box-shadow: 0 2px 2px #3a3a3a;
-    display:  none;
+    display: none;
+    
 }
 
 main  {
