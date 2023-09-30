@@ -88,16 +88,19 @@ main  {
     margin-top: 47px;
 }
 
-footer {
-    /* display: block; */
-    background-color: orange;
-}
-
-/* footer > ul {
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
-} */
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
 
 /* Media query: tablets and larger (> 768px) */
 @media screen and (min-width: 768px) {
