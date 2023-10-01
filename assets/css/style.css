@@ -1,5 +1,5 @@
 /* Google fonts import */
- @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -17,7 +17,9 @@ body {
 
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -36,18 +38,20 @@ header {
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
 }
+
 .nav-toggle-label {
     font-size: 2rem;
 }
 
 /* Nav toggle */
 
-#nav-toggle:checked ~ nav {
+#nav-toggle:checked~nav {
     display: block;
 }
 
 #nav-toggle {
-    display: none;;
+    display: none;
+    ;
 }
 
 header a {
@@ -61,7 +65,7 @@ header a {
     letter-spacing: 4px;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -79,10 +83,10 @@ nav {
     padding: 0 1em;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
-    
+
 }
 
-main  {
+main {
 
     /* Make main element take up any surplus space and push footer down */
     flex: 1 0 auto;
@@ -107,7 +111,8 @@ main  {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
 }
 
@@ -124,6 +129,7 @@ main  {
     padding: 5%;
     color: #3a3a3a;
 }
+
 /* Section: Reasons */
 
 #reasons {
@@ -187,8 +193,9 @@ main  {
         display: flex;
     }
 
-    #menu > li {
-        padding-left: 1rem;;
+    #menu>li {
+        padding-left: 1rem;
+        ;
     }
 
     .nav-toggle-label {
@@ -200,6 +207,7 @@ main  {
         line-height: 75px;
         margin: 0 0.5rem;
     }
+
     /* Push main content down to accomodate larger header  */
     main {
         margin-top: 79px;
@@ -211,12 +219,73 @@ main  {
         right: 50px;
     }
 
+    /* Reasons section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
 }
 
 /* Media query: Large devices (> 992px) */
 @media screen and (min-width: 992px) {
-    #menu  a:hover {
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+
+}
+
+/* Media query: Large devices (> 1200px) */
+@media screen and (min-width: 1200px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+#reasons {
+    width: 100%;
+}
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits > div {
+        flex: 1;
+
+    }
+
+    #benefits-physical {
+        order: 1;
+    }
     
+    #benefits-mental {
+        order: 3;
+
+    }
+
+    #benefits-image {
+        order: 2;
+    }
+
+    
+    #benefits-physical > div {
+align-self: flex-end; 
+   }
+    
+    #benefits-mental > div {
+align-self: flex-start;
+    }
+    
+
 }
