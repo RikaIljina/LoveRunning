@@ -178,6 +178,40 @@ main {
     justify-content: center;
 }
 
+
+
+
+#meetups {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#times {
+    display: flex;
+    flex-wrap: wrap;
+    background: url('../images/dublin-city.webp') no-repeat center center / cover;
+
+    justify-content: center;
+    /* gap: 5px; */
+
+}
+
+#times div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    text-align: center;
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 2px solid white;
+}
+
+/* Overriding h3 color */
+#times h3 {
+    color: #fafafa;
+}
+
 /* Media query: tablets and larger (> 768px) */
 @media screen and (min-width: 768px) {
 
@@ -252,15 +286,17 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-#reasons {
-    width: 100%;
-}
+
+    #reasons {
+        width: 100%;
+    }
+
     #benefits {
         display: flex;
         flex-direction: row;
     }
 
-    #benefits > div {
+    #benefits>div {
         flex: 1;
 
     }
@@ -268,7 +304,7 @@ main {
     #benefits-physical {
         order: 1;
     }
-    
+
     #benefits-mental {
         order: 3;
 
@@ -278,14 +314,14 @@ main {
         order: 2;
     }
 
-    
-    #benefits-physical > div {
-align-self: flex-end; 
-   }
-    
-    #benefits-mental > div {
-align-self: flex-start;
+
+    #benefits-physical>div {
+        align-self: flex-end;
     }
-    
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
 
 }
